@@ -21,6 +21,36 @@
     color: #683b11;
 }
 
-.nav-item{
-    color: #683b11;
+#fotoperfil{
+    width: 30%;
+    height: fit-content;
+}
+
+.botonfb {
+
+    font-weight: 600;
+    background-color: transparent;
+    border-color: #4267B2;
+    border-radius: 10px;
+
+    
+}
+
+.botonfb:hover{
+    background-color: #4267B2;
+    transition: 0.5s;
+}
+
+.botonig {
+
+    font-weight: 600;
+    background-color: transparent;
+    border-color: darkmagenta;
+    border-radius: 10px;
+    
+  }
+
+.botonig:hover{
+    background-color: darkmagenta;
+    transition: 0.5s;
 }
