@@ -1,6 +1,10 @@
 #carruselimg{
     width: 100%;
     height: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 #icono{
@@ -17,21 +21,35 @@
     border-radius: 50%;
     
 }
+
+#fotoperfil{
+    
+    padding-right: 30px;
+    width: 40%;
+    height: 40%;
+    
+
+}
+
+
+.navbar{
+    border-radius: 10px;
+    background-color: #4267B2;
+}
 .navbar-brand{
     color: #683b11;
 }
 
-#fotoperfil{
-    width: 30%;
-    height: fit-content;
-}
 
 .botonfb {
 
     font-weight: 600;
-    background-color: transparent;
+    background-color: blanchedalmond;
     border-color: #4267B2;
     border-radius: 10px;
+    border-width: 4px;
+    border-top: transparent;
+    border-left: transparent;
 
     
 }
@@ -44,13 +62,42 @@
 .botonig {
 
     font-weight: 600;
-    background-color: transparent;
+    background-color:blanchedalmond;
     border-color: darkmagenta;
     border-radius: 10px;
+    border-width: 4px;
+    border-top: transparent;
+    border-left: transparent;
     
   }
 
 .botonig:hover{
     background-color: darkmagenta;
     transition: 0.5s;
+}
+
+#links1{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+body{
+    background: fixed;
+    background-color:#683b11 ;
+    
+}
+
+#galeriadiv{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-body{
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
