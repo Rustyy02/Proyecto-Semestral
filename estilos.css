@@ -126,7 +126,7 @@ body{
 
     /*
     background: fixed;
-    background-color:#683b11 ;
+    background-color:#683b11;
     
 }
 
@@ -158,6 +158,7 @@ body{
     width: 100%;
     
 }
+
 .container-img img:hover{
     filter: blur(2px);
     transition:all .2s ease-in-out;
@@ -174,3 +175,4 @@ body{
     background-image: url(media/background.jpg);
     background-size: cover;
 }
+
