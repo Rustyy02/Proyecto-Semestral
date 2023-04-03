@@ -204,32 +204,35 @@ td p {
 }
 
 .valor-total table {
-
   border-top: 4px solid #683b11;
-  
   width: 100%;
   max-width: 350px;
   border-bottom: 4px solid #683b11;
   background-color: antiquewhite;
 }
+
 .valor-total td {
   text-align: right;
 }
+
 .valor-total th {
   text-align: right;
 }
 
 .botoncompra {
-  background-color: #111827;
+  background-color:#683b11;
   border: transparent;
   border-radius: 10px;
   color: #ffffff;
   padding: 5px;
   transition-duration: 0.2s;
-  margin-top: 10px;
+  margin-top: 20px;
+  align-items: center;
+  max-width: 300px;
 }
+
 .botoncompra:hover {
-  background-color: #374151;
+  opacity: 0.8;
 }
 
 #d {
@@ -291,6 +294,8 @@ td p {
     height: auto;
     width: 50%;
     padding: 20px;
+    min-width: 300px;
+    min-height: 200px;
 }
 
 .texto-info2{
