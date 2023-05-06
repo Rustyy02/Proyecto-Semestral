@@ -54,7 +54,7 @@
 }
 
 .navbar-brand {
-  color: #683b11;
+  color: antiquewhite;
 }
 
 #links1 {
@@ -271,10 +271,30 @@ td p {
 
 .footer{
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
-  border: 10px solid firebrick;
+  padding: 1rem;
+  background-color:midnightblue;
+}
+
+@media (min-width: 700px){
+  .footer{
+    flex-direction: row;
+  }
 }
 
 .footer > * {
-  flex-shrink: 1;
+  flex:1;
+  color: antiquewhite;
+
+}
+
+.footerLink{
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.footerLink:hover{
+  color:#683b11;
 }
