@@ -17,7 +17,7 @@
     grid-auto-flow: row;
     padding-top: 20px;
     padding-left: 30px;
-    color:#ffffff;
+    color:black;
     letter-spacing: 2px;
    
 }
@@ -65,11 +65,7 @@
 }
 
 body {
-  background-image: url(media/background.jpg);
-  background-size: cover;
-
-  /*background: fixed;
-    background-color:#683b11;*/
+background-color: antiquewhite;
 }
 
 #galeriadiv {
@@ -90,7 +86,7 @@ body {
 
 .container h5 {
   padding-top: 50px;
-  color: azure;
+  color: black;
   font-size: 150%;
 }
 .container-img img {
@@ -109,52 +105,8 @@ body {
   padding: 3px;
 }
 
-.div-imagen-fondo {
-  background-image: url(media/background.jpg);
-  background-size: cover;
-}
-
 .card-body{
     border-radius: 10px;
-}
-
-/*----------Card Perfil-----------*/
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  background-color: antiquewhite;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #683b11;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover,
-a:hover {
-  opacity: 0.7;
 }
 
 /*------------CARRITO--------------*/
@@ -249,7 +201,7 @@ td p {
 }
 
 .informacion h1{
-    color:#ffffff;
+    color:black;
 }
 
 .informacion img{
@@ -264,7 +216,7 @@ td p {
 
 .texto-info{
     width:550px;
-    color:#ffffff;
+    color:black;
     text-transform: capitalize;
 
 }
@@ -287,7 +239,7 @@ td p {
 }
 
 .informacion2 h1{
-    color:#ffffff;
+    color:black;
 }
 
 .informacion2 img{
@@ -300,7 +252,7 @@ td p {
 
 .texto-info2{
     width:550px;
-    color:#ffffff;
+    color:black;
     text-transform: capitalize;
 
 }
@@ -313,4 +265,16 @@ td p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+}
+
+/*------------Footer-------------*/
+
+.footer{
+  display: flex;
+  gap: 2rem;
+  border: 10px solid firebrick;
+}
+
+.footer > * {
+  flex-shrink: 1;
 }
