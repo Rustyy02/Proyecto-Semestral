@@ -19,7 +19,7 @@
     padding-left: 30px;
     color:black;
     letter-spacing: 2px;
-   
+  
 }
 
 #icono {
@@ -81,7 +81,7 @@ background-color: antiquewhite;
 
 .container h5 {
   padding-top: 50px;
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 150%;
 }
 .container-img img {
