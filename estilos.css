@@ -178,6 +178,11 @@ td p {
   max-width: 300px;
 }
 
+.botoncompra a{
+  text-decoration: none;
+  color: antiquewhite;
+}
+
 .botoncompra:hover {
   opacity: 0.8;
 }
@@ -534,13 +539,13 @@ main {
   margin-top: 50px;
 }
 
-.columna{
+.columna-api{
   display:flex;
   align-items: center;
   text-align: left;
 }
 
-.columna img {
+.columna-api img {
   width: 40px;
   margin-right: 10px;
 }
