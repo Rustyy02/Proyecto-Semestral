@@ -97,22 +97,22 @@
       <input type="text" placeholder="Ingrese Ciudad">
       <button><img src="media/buscar.jpg" alt=""></button>
     </div>  
-      <div class="clima">
-        <img src="" class="icono-clima">
-        <h1 class="temperatura">22</h1>
-        <h2 class="ciudad">Valparaíso</h2>
+    <div class="clima">
+        <img src="media/rain.png" class="icono-clima">
+        <h1 class="temperatura">0</h1>
+        <h2 class="ciudad"></h2>
         <div class="detalles">
           <div class="columna">
-            <img src="media/rain.png">
+            <img src="media/humidity.png">
             <div>
-              <p class="humedad">50%</p>
+              <p class="humedad">0%</p>
               <p>Humedad</p>
             </div>
           </div>
           <div class="columna">
-            <img src="media/humidity.png">
+            <img src="media/wind.png">
             <div>
-              <p class="viento">15 km/h</p>
+              <p class="viento">0 km/h</p>
               <p>Viento</p>
             </div>
           </div>
@@ -152,17 +152,30 @@
 </footer>
 
 <script>
-  const apiKey = 'c516626f417d7cb5a15fefb8c8c45c13'
-  const apiURL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore'
-
-  async function checkWeather(){
-    const response = await fetch(apiURL + `&appid=${apiKey}`);
+  const apiKey = "c516626f417d7cb5a15fefb8c8c45c13";
+  const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+  
+  const busqueda = document.querySelector(".buscar input");
+  const botonbusqueda = document.querySelector(".buscar button");
+  
+  async function checkWeather(ciudad){
+    const response = await fetch(apiURL + ciudad + `&appid=${apiKey}`);
     var data = await response.json();
 
     console.log(data);
+  
+    document.querySelector(".ciudad").innerHTML = data.name;
+    document.querySelector(".temperatura").innerHTML = Math.round(data.main.temp) + "°C";
+    document.querySelector(".humedad").innerHTML = Math.round(data.main.temp) + " %";
+    document.querySelector(".viento").innerHTML = data.wind.speed + " km/h";
+  
   }
 
-  checkWeather();
+  botonbusqueda.addEventListener("click", ()=>{
+    checkWeather(busqueda.value);
+  })
+
+
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
