@@ -82,15 +82,17 @@
 
 <section class="informacion">
   <div class="principal">
-    <img style="width:auto; height: 300px; border-radius:50%" src="media/logo1.jpg" alt="">
+    <img style="width:auto; height: 300px; border-radius:50%" src="media/logo1.jpg" alt="logo">
     <div class="texto-info">
       <h1>Litorales Creaciones</h1>
       <h5>Productos artesanales para la V Región
       </h5>
       <p>Pyme ubicada en la V Región dedicada a la confección de productos artesanales con materiales reciclados</p>
       <h3>Te invitamos a conocer nuestros productos</h3>
-      <button class="botoncompra"><a href="galeria.html">Galería</a></button>
-      <button class="botoncompra"><a href="tienda.html">Tienda</a></button>
+        <div>
+          <button><a href="galeria.html">Galería</a></button>
+          <button><a href="tienda.html">Tienda</a></button>
+        </div>
     </div>
   </div>
   </section>
@@ -99,7 +101,10 @@
     <div class="buscar">
       <input type="text" placeholder="Ingrese Ciudad">
       <button><img src="media/buscar.jpg" alt=""></button>
-    </div>  
+    </div>
+    <div class="error-api">
+        <p>Nombre de ciudad inválido</p>
+    </div> 
     <div class="clima">
         <img src="media/rain.png" class="icono-clima">
         <h1 class="temperatura">0</h1>
@@ -160,9 +165,16 @@
   
   const busqueda = document.querySelector(".buscar input");
   const botonbusqueda = document.querySelector(".buscar button");
-  
+  const iconoclima = document.querySelector(".icono-clima");
+
   async function checkWeather(ciudad){
     const response = await fetch(apiURL + ciudad + `&appid=${apiKey}`);
+    
+    if(response.status == 404){
+      document.querySelector(".error-api").style.display = "block";
+      document.querySelector(".clima").style.display = "none";
+    } else{
+
     var data = await response.json();
 
     console.log(data);
@@ -172,7 +184,28 @@
     document.querySelector(".humedad").innerHTML = Math.round(data.main.temp) + " %";
     document.querySelector(".viento").innerHTML = data.wind.speed + " km/h";
   
+    if (data.weather[0].main == "Clouds"){
+      iconoclima.src = "media/clouds.png";
+    }else if (data.weather[0].main == "Clear"){
+      iconoclima.src = "media/clear.png";
+    }else if (data.weather[0].main == "Rain"){
+      iconoclima.src = "media/rain.png";
+    }else if (data.weather[0].main == "Snow"){
+      iconoclima.src = "media/snow.png";
+    }else if (data.weather[0].main == "Drizzle"){
+      conoclima.src = "media/drizzle.png";
+    }else if (data.weather[0].main == "Mist"){
+      conoclima.src = "media/mist.png";
+    }
+
+
+    document.querySelector(".clima").style.display = "block";
+    document.querySelector(".error-api").style.display = "none";
+
+
   }
+}
+
 
   botonbusqueda.addEventListener("click", ()=>{
     checkWeather(busqueda.value);

@@ -167,6 +167,7 @@ td p {
 }
 
 .botoncompra {
+  
   background-color:#683b11;
   border: transparent;
   border-radius: 10px;
@@ -174,7 +175,6 @@ td p {
   padding: 5px;
   transition-duration: 0.2s;
   margin-top: 20px;
-  align-items: center;
   max-width: 300px;
 }
 
@@ -218,7 +218,25 @@ td p {
     width:550px;
     color:black;
     text-transform: capitalize;
+}
 
+.texto-info button{
+  background-color:#683b11;
+  border: transparent;
+  border-radius: 10px;
+  padding: 5px;
+  transition-duration: 0.2s;
+  margin-top: 20px;
+  max-width: 300px;
+}
+
+.texto-info button :hover{
+  opacity: 0.8;
+}
+
+.texto-info button a{
+  text-decoration: none;
+  color: antiquewhite;
 }
 
 .principal{
@@ -555,3 +573,10 @@ main {
   margin-top: -6px;
 }
 
+.error-api{
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
