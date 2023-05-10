@@ -93,9 +93,8 @@ formulario.addEventListener('submit', (e) => {
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('mensaje-error');
-		}, 5000);
+		document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje');
+		document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
