@@ -647,3 +647,134 @@ main {
   padding: 10px;
   text-align-last: center;
 }
+
+/*------------ Login ------------*/
+
+
+.inputLogin{
+  width: 40vw;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+  max-width: 100%;
+  min-width: 93%;
+}
+
+
+#textoh1Login{
+  color: #fff;
+  font-size: 40px;
+  padding-bottom: 15px;
+}
+
+.textoLogin{
+	font-weight: 700;
+  padding-top: 30px;
+  text-align: left;
+  color: #fff;
+}
+
+.input_box i{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  padding-right: 1%;
+
+}
+
+
+.containerLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #683b11;
+  padding: 45px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 200px;
+  margin-top: 50px;
+}
+
+
+
+form .fa-solid.email,.fa-solid.password{
+  color: #fff;
+  right: 4%;
+  font-size: 25px;
+
+}
+
+.formulario_labelLogin{
+  color: #fff;
+  pointer-events: none;
+}
+.form-group i.fa-user{
+  color: #fff;
+  padding: 10px;
+  font-size: 50px;
+}
+
+.formulario_labelLogin{
+  display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+.formulario_inputLogin{
+  width: 30vw;
+	background: #ffffff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+  max-width: 90%;
+  min-width: 200px;
+}
+
+.formulario_btnLogin{
+  height: 45px;
+	line-height: 45px;
+	width: 60%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+  margin-top: 15px;
+}
+
+#linkLogin{
+  position:relative;
+  right: -20%;
+  height: 45px;
+	line-height: 45px;
+	width: 60%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  margin-top: 10px;
+}
