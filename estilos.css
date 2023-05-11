@@ -595,3 +595,55 @@ main {
   margin-top: 10px;
   display: none;
 }
+
+.columnas-api{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*------------Mensajes Cianotipia API-------------*/
+
+.mensaje-cianotipia-posible{
+  
+  background-color:#683b11;
+  margin: 20vh;
+  border-radius: 20%;
+  max-height: 500px;
+  padding-top: 100px;
+  display: none;
+
+}
+
+.mensaje-cianotipia-noposible{
+  
+  background-color:#683b11;
+  margin: 20vh;
+  border-radius: 20%;
+  max-height: 500px;
+  padding-top: 100px;
+  display: none;
+}
+
+.imgs-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.imgs-div img{
+  width: 200px;
+}
+
+.mensaje-cianotipia-posible p{
+  color: antiquewhite;
+  padding: 10px;
+  text-align-last: center;
+}
+
+.mensaje-cianotipia-noposible p{
+  color: antiquewhite;
+  padding: 10px;
+  text-align-last: center;
+}

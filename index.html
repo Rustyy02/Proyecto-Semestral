@@ -97,36 +97,57 @@
   </div>
   </section>
 
-  <div class="api-clima">
-    <div class="buscar">
-      <input type="text" placeholder="Ingrese Ciudad">
-      <button><img src="media/buscar.jpg" alt=""></button>
+  <div class="columnas-api">
+
+    <div class="mensaje-cianotipia-posible">
+      <p>Hoy existen condiciones adecuadas para realizar revelado solar!</p>
+      <div class="imgs-div">
+        <img src="media/film.png" alt="">
+        <img src="media/yes.png" alt="">
+      </div>
     </div>
-    <div class="error-api">
-        <p>Nombre de ciudad inválido</p>
-    </div> 
-    <div class="clima">
-        <img src="media/rain.png" class="icono-clima">
-        <h1 class="temperatura">0</h1>
-        <h2 class="ciudad"></h2>
-        <div class="detalles">
-          <div class="columna-api">
-            <img src="media/humidity.png">
-            <div>
-              <p class="humedad">0%</p>
-              <p>Humedad</p>
+
+    <div class="api-clima">
+      <div class="buscar">
+        <input type="text" placeholder="Ingrese Ciudad">
+        <button><img src="media/buscar.jpg" alt=""></button>
+      </div>
+      <div class="error-api">
+          <p>Nombre de ciudad inválido</p>
+      </div> 
+      <div class="clima">
+          <img src="media/rain.png" class="icono-clima">
+          <h1 class="temperatura">0</h1>
+          <h2 class="ciudad"></h2>
+          <div class="detalles">
+            <div class="columna-api">
+              <img src="media/humidity.png">
+              <div>
+                <p class="humedad">0%</p>
+                <p>Humedad</p>
+              </div>
             </div>
-          </div>
-          <div class="columna-api">
-            <img src="media/wind.png">
-            <div>
-              <p class="viento">0 km/h</p>
-              <p>Viento</p>
+            <div class="columna-api">
+              <img src="media/wind.png">
+              <div>
+                <p class="viento">0 km/h</p>
+                <p>Viento</p>
+              </div>
             </div>
           </div>
         </div>
+    </div>
+
+    <div class="mensaje-cianotipia-noposible">
+      <p>Hoy no es un día óptimo para realizar revelado solar</p>
+      <div class="imgs-div">
+        <img src="media/film.png" alt="">
+        <img src="media/no.png" alt="">
       </div>
-  </div>
+    </div>
+
+</div>
+
 
 
 <footer>
@@ -198,6 +219,13 @@
       conoclima.src = "media/mist.png";
     }
 
+    if(data.weather[0].main == "Clear"){
+      document.querySelector(".mensaje-cianotipia-posible").style.display = "block"
+      document.querySelector(".mensaje-cianotipia-noposible").style.display = "none"
+    }else{
+      document.querySelector(".mensaje-cianotipia-posible").style.display = "none"
+      document.querySelector(".mensaje-cianotipia-noposible").style.display = "block"
+    }
 
     document.querySelector(".clima").style.display = "block";
     document.querySelector(".error-api").style.display = "none";
